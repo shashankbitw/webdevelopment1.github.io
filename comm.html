@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Community Outreach</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/tabstyle.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .image-gallery{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-1 img-2 img-3';
+            
+        }
+        .image-gallery a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery a:hover i,.image-gallery a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-1{
+            grid-area: img-1;
+            min-height: 20.5rem;
+            background-image: url("img/walk1.jpg");
+            
+        }
+        .img-2{
+            grid-area: img-2;
+            background-image: url("img/walk2.jpg");
+            
+        }
+       
+        @media screen and (max-width:900px){
+            .image-gallery{
+                grid-template-areas: 'img-1 img-2 ';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery{
+                grid-template-areas: 'img-1 img-1 img-1'
+                                        'img-2 img-2 img-2'
+                    'img-3 img-3 img-3';
+            }
+            .image-gallery a{
+                height: 20rem;
+            }
+        }
+        
+        .image-gallery2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-4 img-5 img-6';
+            
+        }
+        .image-gallery2 a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery2 a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery2 a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery2 a:hover i,.image-gallery2 a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-4{
+            grid-area: img-4;
+            min-height: 20.5rem;
+            background-image: url("img/selh0.jpg");
+            
+        }
+        .img-5{
+            grid-area: img-5;
+            background-image: url("img/selh1.jpg");
+            
+        }
+        .img-6{
+            grid-area: img-6;
+            background-image: url("img/selh2.jpg");
+            
+        }
+        @media screen and (max-width:900px){
+            .image-gallery2{
+                grid-template-areas: 'img-4 img-5 img-6';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery2{
+                grid-template-areas: 'img-4 img-4 img-4'
+                                        'img-5 img-5 img-5'
+                    'img-6 img-6 img-6';
+            }
+            .image-gallery2 a{
+                height: 20rem;
+            }
+        }
+        .image-gallery4{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-7 img-8 img-9';
+            
+        }
+        .image-gallery4 a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery4 a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery4 a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery4 a:hover i,.image-gallery4 a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-7{
+            grid-area: img-7;
+            min-height: 20.5rem;
+            background-image: url("img/smart1.png");
+            
+        }
+        .img-8{
+            grid-area: img-8;
+            background-image: url("img/smart2.png");
+            
+        }
+        .img-9{
+            grid-area: img-9;
+            background-image: url("img/smart3.png");
+            
+        }
+        @media screen and (max-width:900px){
+            .image-gallery4{
+                grid-template-areas: 'img-7 img-8 img-9';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery4{
+                grid-template-areas: 'img-7 img-7 img-7'
+                                        'img-8 img-8 img-8'
+                    'img-9 img-9 img-9';
+            }
+            .image-gallery4 a{
+                height: 20rem;
+            }
+        }
+        .image-gallery6{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-10 img-11';
+            
+        }
+        .image-gallery6 a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery6 a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery6 a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery6 a:hover i,.image-gallery6 a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-10{
+            grid-area: img-10;
+            min-height: 20.5rem;
+            background-image: url("img/matlab1.jpg");
+            
+        }
+        .img-11{
+            grid-area: img-11;
+            background-image: url("img/matlab4.jpg");
+            
+        }
+        
+        @media screen and (max-width:900px){
+            .image-gallery6{
+                grid-template-areas: 'img-10 img-11';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery6{
+                grid-template-areas: 'img-10 img-10 img-10'
+                                        'img-11 img-11 img-11';
+            }
+            .image-gallery6 a{
+                height: 20rem;
+            }
+        }
+        .image-gallery7{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-12 img-13 img-14';
+            
+        }
+        .image-gallery7 a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery7 a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery7 a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery7 a:hover i,.image-gallery7 a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-12{
+            grid-area: img-12;
+            min-height: 20.5rem;
+            background-image: url("img/sdp42.jpg");
+            
+        }
+        .img-13{
+            grid-area: img-13;
+            background-image: url("img/sdp43.jpg");
+            
+        }
+        
+        @media screen and (max-width:900px){
+            .image-gallery7{
+                grid-template-areas: 'img-12 img-13';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery7{
+                grid-template-areas: 'img-12 img-12 img-12'
+                                        'img-13 img-13 img-13';
+            }
+            .image-gallery7 a{
+                height: 20rem;
+            }
+        }
+        
+        
+    </style>
+
+    
+</head>
+
+<body>
+
+   
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+                <a href="index.html" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
+            </div>
+
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="drop-down"><a href="">Cells</a>
+                        <ul>
+                            <li><a href="style.html">Skill Development Center</a></li>
+                            <li><a href="innovation.html">Innovation</a></li>
+                            <li><a href="ipr.html">IPR Cell</a></li>
+                            <li> <a href="iedc.html">IEDC</a></li>
+                            <li><a href="https://www.revanest.com">REVA Nest</a></li>
+                            <li><a href="comm.html">Community Outreach</a></li>
+                            <li><a href="code.html">UIIC Code Community</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="coll.html">Collaborations</a></li>
+                    <li><a href="partners.html">Industrial Partners</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://forms.gle/Q2eSwxRvWhGYCpVz8">Apply now</a></li>
+
+                </ul>
+            </nav><!-- .main-nav -->
+
+        </div>
+    </header><!-- #header -->
+    <br><br><br>
+    
+    <main id="main">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section id="tabs" class="project-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Walkathon</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">SelectHER</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-jsd" role="tab" aria-controls="nav-contact" aria-selected="false">Adoption of Shettigere Village</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-sp" role="tab" aria-controls="nav-contact" aria-selected="false">SMART Centre Innaugration</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-sdp" role="tab" aria-controls="nav-contact" aria-selected="false">CSR for Whirlpool</a>
+                                
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent" style="font-size: 20px">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <p>As part of community outreach program UIIC, REVA University joined hands with Motherhood India for the Nobel task “ Beti Bachao Beti Padhao walkathon" on Daughter's day (24 Sep 2017). The registration fees of this event will go to Swanthana charitable trust which houses 50 girls between the ages 8 months and 15 years, who are mentally challenged and have multiple disabilities.</p>
+                                <div class="image-gallery"> 
+                                    <a href="img/walk1.jpg" class="img-1">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/walk2.jpg" class="img-2">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <p> Select HER is a demand-driven corporate initiative to skill and empower underprivileged women for careers in lifestyle and fashion retail in India.It is a carefully designed, mentor-led, advanced skill training program which incorporates retail skills, life skills as well as on-job-training.</p>
+                                <div class="image-gallery2"> 
+                                    <a href="img/selh0.jpg" class="img-4">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/selh1.jpg" class="img-5">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/selh2.jpg" class="img-6">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="nav-jsd" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <p>As per the initiative and guidelines of Government of Karnataka, REVA University adopted Shettigere Village, Jala hobli near International airport, to develop it as a SMART Village. As a part of inaugural programme, World Environment day was also celebrated by tree plantation by our Hon'ble Chancellor Dr. P. Shamaraju Sir along with Vice chancellor Dr S Y Kulkarni and Dr M Dhanamjaya Registrar. </p>
+                                
+                            </div>
+                            
+                            <div class="tab-pane fade" id="nav-sp" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <p>REVA University joined hands with Tech Mahindra Foundation CSR Initiative to empower youth of the country by Inaugurating SMART Centre at REVA University Campus. </p>
+                                 <div class="image-gallery4"> 
+                                    <a href="img/smart1.png" class="img-7">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/smart2.png" class="img-8">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/smart3.png" class="img-9">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="tab-pane fade" id="nav-sdp" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <p> REVA UIIC, in association with Team Lease executed the CSR (Corporate Social Responsibility) project of Whirlpool in the month of June 2017. For the first batch, there were 25 students who got the benefit out of this project. Certified students entered into OJT (on job training) with Rs. 7250/- as Stipend.</p>  
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                   
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h5 style="font-size: 21px"><b>USEFUL LINKS</b></h5>
+                        <ul style="font-size: 20px">
+                            <li ><a href="index.html">Home</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="partners.html">Industrial Partners</a></li>
+                            <li><a href="coll.html">Our Collaborations</a></li>
+                        </ul>
+                    </div>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
+                     <div class="col-lg-3 col-md-3 footer-links">
+                        <h4>Cells</h4>
+                        <ul style="font-size: 20px">
+                            <li ><a href="style.html">Skill Development Centre</a></li>
+                            <li><a href="ipr.html">IPR Cell</a></li>
+                            <li><a href="iedc.html">IEDC</a></li>
+                            <li><a href="comm.hmtl">Community Outreach</a></li>
+                            <li><a href="code.html">Code Academy</a></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p style="font-size: 20px">
+                            REVA NEST <br>
+                            C V Raman Block, Rukmini Knowledge Park,<br>
+                            Yelahanka,Kattigenahalli, Srinivasa Nagar,Bengaluru, Karnataka 560064<br>
+                            <strong>Phone:</strong> +91-9886406803<br>
+                            <strong>Email:</strong> kirankumari@reva.edu.in<br>
+                        </p>
+                        <!--
+                        <div class="social-links">
+                            <a href="https://twitter.com/uiic_ru" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/REVAINCUBATION" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/reva-uiic/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>-->
+                        
+                    </div>
+                                   
+                       <div class="social-links">
+                           <h4>Connect with US</h4><br>
+                            <a href="https://twitter.com/uiic_ru" class="twitter"><i class="fa fa-twitter"></i></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="https://www.facebook.com/REVAINCUBATION" class="facebook"><i class="fa fa-facebook fa-7x"></i></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="https://www.linkedin.com/in/reva-uiic/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </footer><!-- #footer -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

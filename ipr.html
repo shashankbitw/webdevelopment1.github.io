@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>IPR Cell</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/tabstyle.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .image-gallery{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-1 img-2 img-3';
+            
+        }
+        .image-gallery a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery a:hover i,.image-gallery a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-1{
+            grid-area: img-1;
+            min-height: 20.5rem;
+            background-image: url("img/cr1.jpg");
+            
+        }
+        .img-2{
+            grid-area: img-2;
+            background-image: url("img/cr4.jpg");
+            
+        }
+        .img-3{
+            grid-area: img-3;
+            background-image: url("img/cr6.jpg");
+            
+        }
+        @media screen and (max-width:900px){
+            .image-gallery{
+                grid-template-areas: 'img-1 img-2 img-3';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery{
+                grid-template-areas: 'img-1 img-1 img-1'
+                                        'img-2 img-2 img-2'
+                    'img-3 img-3 img-3';
+            }
+            .image-gallery a{
+                height: 20rem;
+            }
+        }
+        
+        .image-gallery2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-4 img-5 img-6';
+            
+        }
+        .image-gallery2 a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery2 a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery2 a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery2 a:hover i,.image-gallery2 a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-4{
+            grid-area: img-4;
+            min-height: 20.5rem;
+            background-image: url("img/f2.jpg");
+            
+        }
+        .img-5{
+            grid-area: img-5;
+            background-image: url("img/f3.jpg");
+            
+        }
+        
+        @media screen and (max-width:900px){
+            .image-gallery2{
+                grid-template-areas: 'img-4 img-5 img-6';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery2{
+                grid-template-areas: 'img-4 img-4 img-4'
+                                        'img-5 img-5 img-5'
+                    'img-6 img-6 img-6';
+            }
+            .image-gallery2 a{
+                height: 20rem;
+            }
+        }
+        .image-gallery4{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1.5rem;
+            grid-template-areas: 'img-7 img-8 img-9';
+            
+        }
+        .image-gallery4 a{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .img-gallery4 a i{
+            font-size:3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid rgba(255,255,255, .6);
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+            
+        }
+        .image-gallery4 a::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba(0,0,0,.8);
+            opacity: 0;
+            transition:opacity .5s;
+        }
+        .image-gallery4 a:hover i,.image-gallery4 a:hover::before{
+            opacity: 1;
+            
+        }
+        .img-7{
+            grid-area: img-7;
+            min-height: 20.5rem;
+            background-image: url("img/fdp2.jpg");
+            
+        }
+        .img-8{
+            grid-area: img-8;
+            background-image: url("img/fdp2.jpg");
+            
+        }
+        .img-9{
+            grid-area: img-9;
+            background-image: url("img/fdp3.jpg");
+            
+        }
+        @media screen and (max-width:900px){
+            .image-gallery4{
+                grid-template-areas: 'img-7 img-8 img-9';
+                                        
+                    
+                
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .image-gallery4{
+                grid-template-areas: 'img-7 img-7 img-7'
+                                        'img-8 img-8 img-8'
+                    'img-9 img-9 img-9';
+            }
+            .image-gallery4 a{
+                height: 20rem;
+            }
+        }
+        
+        
+        
+    </style>
+
+    
+</head>
+
+<body>
+
+   
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+                <a href="index.html" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
+            </div>
+
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="drop-down"><a href="">Cells</a>
+                        <ul>
+                            <li><a href="style.html">Skill Development Center</a></li>
+                            <li><a href="innovation.html">Innovation</a></li>
+                            <li><a href="ipr.html">IPR Cell</a></li>
+                            <li><a href="iedc.html">IEDC</a></li>
+                            <li><a href="https://www.revanest.com">REVA Nest</a></li>
+                            <li><a href="comm.html">Community Outreach</a></li>
+                            <li><a href="code.html">UIIC Code Community</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="coll.html">Collaborations</a></li>
+                    <li><a href="partners.html">Industrial Partners</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://forms.gle/Q2eSwxRvWhGYCpVz8">Apply now</a></li>
+
+                </ul>
+            </nav><!-- .main-nav -->
+
+        </div>
+    </header><!-- #header -->
+    <br><br><br>
+    
+    <main id="main">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section id="tabs" class="project-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">CONSTITUTIONAL RIGHTS</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Faculty Development Workshop</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">FDP on Patenting Procedures</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent" style="font-size: 20px">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <p>The School of Legal Studies had Organized Seminar on Constitutional Rights on 24/03/2018 between 11:00 A.M. to 1:00 P.M at Basement Seminar Hall, Swami Vivekananda Block for all law students. The resource person was, A S PONNANNA (Addl. Advocate General 2) Advocate General for Karnataka.
+</p>
+                                <div class="image-gallery"> 
+                                    <a href="img/cr1.jpg" class="img-1">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/cr4.jpg" class="img-2">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/cr6.jpg" class="img-3">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <p> Visvesvaraya Trade Promotion Centre, Department of Industries and Commerce In association with ,Reva University Bangalore had conducted FDP on Intellectual Property Rights- Significance in Business and Research.</p>
+                                <div class="image-gallery2"> 
+                                    <a href="img/f2.jpg" class="img-4">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/f3.jpg" class="img-5">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <p>The School of CIT in collaboration with UIIC-IPR Cell conducted an FDP on 'Patenting Procedures' with Mrs. Brinda Varma, Patent Attorney as resource person, on 30th March 2019. The event was attended by faculty members, M.Tech Students and B.Tech students.</p>
+                                <div class="image-gallery4"> 
+                                    <a href="img/fdp1.jpg" class="img-7">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/fdp2.jpg" class="img-8">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                      <a href="img/fdp3.jpg" class="img-9">
+                                        <i class="icon ion-md-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                   
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h5 style="font-size: 21px"><b>USEFUL LINKS</b></h5>
+                        <ul style="font-size: 20px">
+                            <li ><a href="index.html">Home</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="partners.html">Industrial Partners</a></li>
+                            <li><a href="coll.html">Our Collaborations</a></li>
+                        </ul>
+                    </div>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
+                     <div class="col-lg-3 col-md-3 footer-links">
+                        <h4>Cells</h4>
+                        <ul style="font-size: 20px">
+                            <li ><a href="style.html">Skill Development Centre</a></li>
+                            <li><a href="ipr.html">IPR Cell</a></li>
+                            <li><a href="iedc.html">IEDC</a></li>
+                            <li><a href="comm.hmtl">Community Outreach</a></li>
+                            <li><a href="code.html">Code Academy</a></li>
+                        </ul>
+                    </div> 
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact Us</h4>
+                        <p style="font-size: 20px">
+                            REVA NEST <br>
+                            C V Raman Block, Rukmini Knowledge Park,<br>
+                            Yelahanka,Kattigenahalli, Srinivasa Nagar,Bengaluru, Karnataka 560064<br>
+                            <strong>Phone:</strong> +91-9886406803<br>
+                            <strong>Email:</strong> kirankumari@reva.edu.in<br>
+                        </p>
+                        <!--
+                        <div class="social-links">
+                            <a href="https://twitter.com/uiic_ru" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/REVAINCUBATION" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/reva-uiic/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>-->
+                        
+                    </div>
+                                   
+                       <div class="social-links">
+                           <h4>Connect with US</h4><br>
+                            <a href="https://twitter.com/uiic_ru" class="twitter"><i class="fa fa-twitter"></i></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="https://www.facebook.com/REVAINCUBATION" class="facebook"><i class="fa fa-facebook fa-7x"></i></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="https://www.linkedin.com/in/reva-uiic/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </footer><!-- #footer -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+   
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
